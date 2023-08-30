@@ -1,93 +1,195 @@
-# Project Title
+# 20 Must Know Linux Commands
 
-One Paragraph of the project description
+Moving from using operating systems with a graphical user interface to a command line based system like Ubuntu Server can be daunting with having to do everything by typing in commands but by knowing this 20 commands will help greatly.
 
-Initially appeared on
-[gist](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2). But the page cannot open anymore so that is why I have moved it here.
 
-## Getting Started
+## 1: sudo
 
-These instructions will give you a copy of the project up and running on
-your local machine for development and testing purposes. See deployment
-for notes on deploying the project on a live system.
+    sudo
 
-### Prerequisites
+The sudo command is used to provide administrative access to run commands that may need it. It gives a 15 minute session that after authenticated, will let the user run administrative tasks or commands that need root permissions.
 
-Requirements for the software and other tools to build, test and push 
-- [Example 1](https://www.example.com)
-- [Example 2](https://www.example.com)
+### Example
 
-### Installing
+    sudo apt update
 
-A step by step series of examples that tell you how to get a development
-environment running
+## 2: cd
 
-Say what the step will be
+The cd command is used to move from one directory to another. It is a very used command so its important to understand how to use it so you can navigate around a linux based machine.
 
-    Give the example
+    cd
 
-And repeat
+### Example
 
-    until finished
+    cd /home/user/files
 
-End with an example of getting some data out of the system or using it
-for a little demo
+## 3: ls
 
-## Running the tests
+    ls
 
-Explain how to run the automated tests for this system
+The ls commands lists the structure of the directory you are working with, in easier terms, it will show all the files that are in the current directory you are working with as well as with different flags can show more options such as file permissions and more.
 
-### Sample Tests
+### Example
 
-Explain what these tests test and why
+    ls -l
 
-    Give an example
+The above command with list the file structure of the directory as well as show the file permissions of them all.
 
-### Style test
+## 4: pwd
 
-Checks if the best practices and the right coding style has been used.
+    pwd
 
-    Give an example
+Pwd shows the present working directory. If you are working in a directory and you want to know the path of where its located you can use this command and it will list out the directory for you.
 
-## Deployment
+## 5: cat
 
-Add additional notes to deploy this on a live system
+    cat
 
-## Built With
+Cat is short for concatenate and is a very useful command as it has multiple uses and be very useful when looking for file content without having to open it.
 
-  - [Contributor Covenant](https://www.contributor-covenant.org/) - Used
-    for the Code of Conduct
-  - [Creative Commons](https://creativecommons.org/) - Used to choose
-    the license
+### Example
 
-## Contributing
+    cat file1.txt file2.txt > file3.txt
 
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code
-of conduct, and the process for submitting pull requests to us.
+This command will take the contents of file 1 and file 2 and write them both to file 3.
 
-## Versioning
+## 6: cp
 
-We use [Semantic Versioning](http://semver.org/) for versioning. For the versions
-available, see the [tags on this
-repository](https://github.com/PurpleBooth/a-good-readme-template/tags).
+    cp
 
-## Authors
+cp is a copy command and also can be used for different purposes like renaming existing files to new ones and more.
 
-  - **Billie Thompson** - *Provided README Template* -
-    [PurpleBooth](https://github.com/PurpleBooth)
+### Example
 
-See also the list of
-[contributors](https://github.com/PurpleBooth/a-good-readme-template/contributors)
-who participated in this project.
+    cp file1.txt file2.txt /home/user/documents
 
-## License
+This command will copy file 1 and write it to the document’s directory as file 2
 
-This project is licensed under the [CC0 1.0 Universal](LICENSE.md)
-Creative Commons License - see the [LICENSE.md](LICENSE.md) file for
-details
+## 7: mv
 
-## Acknowledgments
+    mv
 
-  - Hat tip to anyone whose code is used
-  - Inspiration
-  - etc
+Similar to cp mv can also rename files as well as move them to different directories.
+
+### Example
+
+    mv file1.txt file2.txt /home/user/documents
+
+This command will move file1.txt to /home/user/documents and rename it to file2.txt
+
+## 8: mkdir
+
+    mkdir
+
+Mkdir is used to make new directories in the current location you are in. So if you’d like to make a subfolder in a folder this command can be used for it.
+
+### Example
+
+    mkdir myFolder
+
+## 9: rm
+
+The rm command is used to remove a file. It also has different flags that can be used for different uses such as removing a directory and more
+
+    rm myfile.txt
+
+## 10: locate
+
+    locate myfile
+
+The locate command can be used to search a system for a specific file. There are different flags that can be used to help the search narrow down such as adding a directory or wildcards to it.
+
+### Example
+
+    locate myfile /home/user/documents
+
+## 11: grep
+
+    grep
+
+Grep can be used to search for a certain word in files and will output them for you to see without having to read through the whole file for it.
+
+### Example
+
+    grep barmine barmineTech.txt
+
+## 12: df
+
+    df
+
+The df command is used to show the current disk space usage
+
+### Example
+
+    df -h
+
+This command shows the disk usage in a human readable format
+
+## 13: chmod
+
+    chmod
+
+Chmod is used to modify files read, write and execute permissions.
+
+### Example
+
+    chmod 777 myfile.txt
+
+This command gives the file all permissions
+
+## 14: chown
+
+    chown
+
+Chown is used to change ownership of a file or directory
+
+### Example
+
+    chown root myfile.txt
+
+## 15: wget
+
+    wget
+
+Wget is used to download files from the internet over http, https and ftp.
+
+### Example
+
+    wget www.barminetech.com/myfile.zip
+
+## 16: history
+
+    history
+
+History is a very useful command as it can show up to the last 500 commands ran on the system
+
+## 17: man
+
+    man
+
+The man command is used to show the manual for commands that are installed on a system
+
+### Example
+
+    man nmap
+
+This will show the manual for how to use the nmap command
+
+## 18: zip and unzip
+
+    zip
+    unzip
+
+These commands are used to zip and unzip archive files
+
+## 19: useradd
+
+    useradd
+
+This command is used to add a user, it will open a wizard that asks for inputs in creating a new user on the system
+
+## 20: passwd
+
+    passwd
+
+This command is used to change the password of the user signed in on a system.
